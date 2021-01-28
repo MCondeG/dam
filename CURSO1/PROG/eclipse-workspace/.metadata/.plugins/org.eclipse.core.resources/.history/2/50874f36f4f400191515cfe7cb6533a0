@@ -1,0 +1,13 @@
+package pack;
+
+public class MaqExp {
+
+	public static void main(String[] args) {
+		
+		Moneda m = new Moneda();
+		double d;
+		d = m.pedir();
+		
+		
+	}
+}

@@ -1,0 +1,16 @@
+package pack;
+
+public class Ahorcado {
+
+	public static void main(String[] args) {
+		
+		String[] palabras = {};
+		
+		Grafico g = new Grafico();
+		
+		int vidas = 0;
+		
+		g.pintaAhorcado(vidas);
+	}
+
+}

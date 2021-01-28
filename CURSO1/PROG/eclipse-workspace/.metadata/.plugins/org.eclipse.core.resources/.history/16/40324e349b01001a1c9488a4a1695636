@@ -1,0 +1,91 @@
+package pack;
+
+public class Grafico {
+	
+	public static final String ANSI_BACKGROUND_RED = "\u001B[41m";
+	
+	public void pintaAhorcado (int vidas) {
+		
+		switch (vidas) {
+		case 6:
+			System.out.println("     ____ ");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("         |                    TIENES");
+			System.out.println("         |                    "+vidas+" VIDAS");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("_________|___");
+			break;
+		case 5:
+			System.out.println("     ____ ");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("    O    |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("_________|___");
+			break;
+		case 4:
+			System.out.println("     ____ ");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("    O    |");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("_________|___");
+			break;
+		case 3:
+			System.out.println("     ____ ");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("    O    |");
+			System.out.println("   /|    |");
+			System.out.println("    |    |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("_________|___");
+			break;
+		case 2:
+			System.out.println("     ____ ");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("    O    |");
+			System.out.println("   /|\\   |");
+			System.out.println("    |    |");
+			System.out.println("         |");
+			System.out.println("         |");
+			System.out.println("_________|___");
+			break;
+		case 1:
+			System.out.println("     ____ ");
+			System.out.println("    |    |");
+			System.out.println("    |    |");
+			System.out.println("    O    |");
+			System.out.println("   /|\\   |");
+			System.out.println("    |    |");
+			System.out.println("   /     |");
+			System.out.println("         |");
+			System.out.println("_________|___");
+			break;
+		case 0:
+			System.err.println("     ____ ");
+			System.err.println("    |    |");
+			System.err.println("    |    |");
+			System.err.println("    O    |                    ESTÁS");
+			System.err.println("   /|\\   |                    MUERTO");
+			System.err.println("    |    |");
+			System.err.println("   / \\   |");
+			System.err.println("         |");
+			System.err.println("_________|___");
+			break;
+		default:
+			break;
+		}
+	}
+}

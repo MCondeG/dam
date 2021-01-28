@@ -1,0 +1,29 @@
+package pack;
+
+public class Operacion {
+
+	public String elegir (String[] palabra, String palEleg, int n) {
+		
+		n = (int)(Math.random()*20);
+		
+		palEleg = palabra[n];
+		
+		return palEleg;
+	}
+	
+	public boolean comprobar (String palEleg, char letra, int[] posiciones, int nelem, boolean acierto) {
+		
+		int pos = -1;
+		
+		do {
+			pos = palEleg.indexOf(letra, pos+1);
+			if (pos != -1) {
+				posiciones[nelem] = pos;
+				nelem++;
+				acierto = true;
+			}
+		} while (pos != -1);
+		
+		return acierto;
+	}
+}

@@ -1,0 +1,29 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Moneda {
+	public double pedir() {
+		Scanner sc = new Scanner(System.in);
+		double din = 0.0;		//dinero introducido
+		
+		do {
+			System.out.println("Introduzca monedas (€)");
+			din = sc.nextDouble();
+			if (din < 0) {
+				System.out.println("ERROR");
+			}
+		} while (din < 0);
+
+		sc.close();
+		return(din);
+	}
+	
+	public double aumentar(double d) {
+		
+		double din = pedir();
+		
+		d = d + din;
+		return(d);
+	}
+}

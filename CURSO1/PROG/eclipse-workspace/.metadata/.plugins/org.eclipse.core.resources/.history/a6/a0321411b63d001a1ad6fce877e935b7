@@ -1,0 +1,25 @@
+package ejercicios;
+
+public class Bicicleta extends Vehiculo {
+	
+	private String tipo;
+	
+	Bicicleta(String tipo) {
+		super();
+		this.tipo = tipo;
+	}
+	
+	Bicicleta() {
+		
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+	
+}

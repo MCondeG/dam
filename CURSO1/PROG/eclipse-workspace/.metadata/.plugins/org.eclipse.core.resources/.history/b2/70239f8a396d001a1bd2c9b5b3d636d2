@@ -1,0 +1,66 @@
+package ejercicios;
+
+import java.util.*;
+
+public class PrincipalPersona {
+	
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+				
+		operacionesLista(menu());
+		
+	}
+	
+	public static int menu() {
+		System.out.println("1. Crear lista de 10 personas");
+		System.out.println("2. Lista ordenada según apellido");
+		System.out.println("3. Lista ordenada según edad");
+		System.out.println("4. Salir");
+		
+		return (sc.nextInt());
+	}
+	
+	public static void operacionesLista(int n) {
+		
+		ListaPersona lp = new ListaPersona();
+		
+		boolean existe = false;
+		
+		do {
+			
+			System.out.println("\n");
+			
+			switch (n) {
+			case 1:
+				existe = true;
+				System.out.println("Lista creada:\n");
+				lp.listar();
+				break;
+			case 2:
+				if (existe) {
+					lp.ordenApell();
+					System.out.println("Lista ordenada por apellido:\n");
+					lp.listar();
+				}
+				else System.err.println("ERROR. Lista vacía.");
+				break;
+			case 3:
+				if (existe) {
+					lp.ordenEdad();
+					System.out.println("Lista ordenada por edad:\n");
+					lp.listar();
+				}
+				else System.err.println("ERROR. Lista vacía.");
+				break;
+			case 4:
+				break;
+			default:
+				break;
+			}
+			
+			if (n != 1 && n != 2 && n != 3 && n != 4) System.err.println("ERROR");
+			
+		} while (n != 1 && n != 2 && n != 3 && n != 4);
+	}
+}

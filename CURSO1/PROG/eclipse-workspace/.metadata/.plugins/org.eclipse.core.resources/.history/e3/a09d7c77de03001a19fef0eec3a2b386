@@ -1,0 +1,59 @@
+package pack;
+
+import java.util.Scanner;
+
+public class Ahorcado {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		Operacion o = new Operacion();
+		Pintar p = new Pintar();
+		
+		String[] palabra = {};
+		String palEleg = "";
+		String guion = "";
+		
+		int[] posiciones = new int[20];
+		
+		char letra;
+		int n = 0;
+		int nelem = 0;
+		int vidas = 7;
+		boolean acierto;
+		boolean victoria = false;
+		
+		palEleg = o.elegir(palabra, palEleg, n);
+		
+		System.out.println("¡BIENVENIDO AL AHORCADO!");
+		System.out.println();
+		p.pintaAhorcado(vidas);
+		
+		try {					
+			Thread.sleep(2000);
+		} catch (InterruptedException ex) {
+			System.err.println("ERROR");
+		}
+		
+		while ((vidas > 0) && (victoria != true)) {
+			
+			System.out.println();
+			System.out.println("Introduce una letra");
+			letra = sc.nextLine().toUpperCase().charAt(0);
+			
+			acierto = false;
+			acierto = o.comprobar(palEleg, letra, posiciones, nelem, acierto);
+			
+			if (acierto) {
+				
+			}
+			else {
+				vidas--;
+				p.pintaAhorcado(vidas);
+			}
+			
+			p.pintaAhorcado(vidas);
+		}
+	}
+}

@@ -1,0 +1,36 @@
+package pack;
+
+public class Producto {
+	public void elegir(double d) {
+		
+		int n = (int)(Math.random()*4+1);
+		double precio;
+		
+		switch (n) {
+		case 1:
+			precio = 0.65;
+			System.out.println("Usted ha elegido:");
+			System.out.println("1. Botella de agua pequeña: "+precio+" €");
+			break;
+		case 2:
+			precio = 1.10;
+			System.out.println("Usted ha elegido:");
+			System.out.printf("2. Botella de agua grande: %.2f",precio);
+			System.out.println(" €");
+			break;
+		case 3:
+			precio = 0.70;
+			System.out.println("Usted ha elegido:");
+			System.out.printf("3. Zumo de Naranja: %.2f",precio);
+			System.out.println(" €");
+			break;
+		case 4:
+			precio = 0.75;
+			System.out.println("Usted ha elegido:");
+			System.out.println("4. Batido: "+precio+" €");
+			break;
+		default:
+			break;
+		}
+	}
+}

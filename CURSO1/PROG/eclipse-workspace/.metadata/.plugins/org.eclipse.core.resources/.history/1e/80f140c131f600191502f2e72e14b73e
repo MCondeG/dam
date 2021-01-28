@@ -1,0 +1,23 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class Array6 {
+
+	public static void main(String[] args) {
+		// TODO Apéndice de método generado automáticamente
+
+		Scanner sc = new Scanner(System.in);
+		
+		int[] num = new int[100];
+
+		for (int i = 0;i < num.length;i++) {
+			num[i] = (int)(Math.random()*21);
+			System.out.print(num[i]+" ");
+		}
+		
+		syso
+		
+	}
+
+}

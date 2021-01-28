@@ -1,0 +1,22 @@
+package pack;
+
+public class MaqExp {
+
+	public static void main(String[] args) {
+		
+		Moneda m = new Moneda();
+		Producto p = new Producto();
+		
+		double d = 0.0;			//dinero acumulado
+		double precio = 0.0;	//precio de cada producto
+		
+		d = m.pedir(d);
+		precio = p.elegir();
+		
+		while (d < precio) {
+			System.out.println("Dinero insuficiente");
+			d = d + m.pedir(d);
+		}
+		
+	}
+}

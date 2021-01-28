@@ -1,0 +1,38 @@
+package ejercicios;
+
+import java.util.*;
+
+public class ListaPersona {
+
+	private ArrayList<Persona> a;
+	private static int tamaño = 10;
+	
+	
+	public ListaPersona() {
+		creaLista(this.a);
+	}
+	
+	
+	public static void creaLista(ArrayList<Persona> a) {
+		
+		for (int i = 0; i < tamaño; i++) {
+			a.add(new Persona());
+		}
+	}
+	
+	public void ordenApell() {
+		
+		Collections.sort(this.a);
+	}
+	
+	public void ordenEdad() {
+		
+	}
+	
+	public void listar() {
+		
+		for (int i = 0; i < tamaño; i++) {
+			System.out.println(this.a.get(i));
+		}
+	}
+}
