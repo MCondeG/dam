@@ -1,5 +1,5 @@
 try:
-    n = (int)(input("Introduce un número: "))
+    n = int(input("Introduce un número: "))
     
     if (n%7 == 0):
         print('SI es entero múltiplo de 7')

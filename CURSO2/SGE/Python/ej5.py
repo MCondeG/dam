@@ -1,5 +1,5 @@
-cant = (int)(input('Introduce la cantidad a comprar: '))
-precio = (float)(input('Introduce el precio unitario: '))
+cant = int(input('Introduce la cantidad a comprar: '))
+precio = float(input('Introduce el precio unitario: '))
 
 if (cant <= 5):
     precio = precio

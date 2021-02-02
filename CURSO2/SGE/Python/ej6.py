@@ -1,9 +1,9 @@
 import math
 
-ancho = (float)(input('Introduce ancho: '))
-largo = (float)(input('Introduce largo: '))
-altura = (float)(input('Introduce altura: '))
-diametro = (float)(input('Introduce diámetro del agujero: '))
+ancho = float(input('Introduce ancho: '))
+largo = float(input('Introduce largo: '))
+altura = float(input('Introduce altura: '))
+diametro = float(input('Introduce diámetro del agujero: '))
 
 d1 = math.sqrt(ancho**2 + largo**2)
 d2 = math.sqrt(ancho**2 + altura**2)

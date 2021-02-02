@@ -1,5 +1,5 @@
-p = (float)(input('Introduce peso: '))
-t = (float)(input('Introduce talla: '))
+p = float(input('Introduce peso: '))
+t = float(input('Introduce talla: '))
 
 imc = p/(t**2)
 
