@@ -14,4 +14,4 @@ for x in range(1, 101):
         n2 = x
 
 print()
-print("El número", n2, "es el que tiene mas divisores en el rango [1, 100], con un total de:", max)
+print("El número", n2, "es el que tiene más divisores en el rango [1, 100], con un total de:", max)
