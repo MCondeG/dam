@@ -1,4 +1,5 @@
 import math
+import random
 
 # encuentra los divisores de un entero y los guarda en un array
 def divisores(n):
@@ -17,7 +18,7 @@ def divisores(n):
 
 
 # cuenta los divisores de un entero
-def conteo(n):
+def conteo1(n):
     
     div = divisores(n)
     num = len(div)
@@ -28,7 +29,7 @@ def conteo(n):
 # determina si un entero es primo
 def primo(n):
     
-    if (conteo(n) == 2):
+    if (conteo1(n) == 2):
         return True
     else:
         return False
@@ -116,3 +117,49 @@ def secuencia2(n):
             n3 = s
     
     return s
+
+
+# determina si un entero es capicúa
+def sim(n):
+    
+    cif = cifras(n)
+    aux = cif.copy()
+    aux.reverse()
+    
+    if (cif == aux):
+        return True
+    else:
+        return False
+
+
+# simula la tirada de un dado
+def alfin(n, dado):
+    
+    cont = 0
+    result = 0
+    
+    while (n != result):
+        
+        result = random.randint(1, dado)
+        cont += 1
+    
+    return cont
+
+
+# calcula la cantidad de términos que deben sumarse de la serie (1*2*3 + 2*3*4 + 3*4*5 + 4*5*6+...) hasta que se exceda de una cantidad dada
+def conteo2(n):
+    
+    suma = 0
+    mult = 1
+    cont = 0
+    
+    while (suma <= n):
+        
+        for x in range(1+cont, 4+cont):
+            mult *= x
+        
+        suma += mult
+        mult = 1
+        cont += 1
+    
+    return cont

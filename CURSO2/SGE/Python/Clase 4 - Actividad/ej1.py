@@ -2,13 +2,13 @@ from libFunc import *
 
 n = int(input("Introduce un entero positivo: "))
 n2 = 0
-div = conteo(n)
+div = conteo1(n)
 max = 0
 
 print(n, "tiene", div, "divisores")
 
 for x in range(1, 101):
-    div = conteo(x)
+    div = conteo1(x)
     if (div > max):
         max = div
         n2 = x
